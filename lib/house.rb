@@ -7,11 +7,11 @@ def line(number)
   when 2
     "This is the malt that lay in the house that Jack built.\n"
   when 3
-    #TODO
+    "This is the rat that ate the malt that lay in the house that Jack built.\n"
   when 4
-    #TODO
+    "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
   when 5
-    #TODO
+    "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
   when 6
     #TODO
   when 7
