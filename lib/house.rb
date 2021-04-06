@@ -31,4 +31,12 @@ def line(number)
   end
 end
 
+def recite
+  array_of_lines = Array.new
+  (1..12).each do |line_number|
+    array_of_lines << line(line_number)
+  end
+  array_of_lines.join("\n")
+end
+
 end
