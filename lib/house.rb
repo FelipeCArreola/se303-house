@@ -3,7 +3,8 @@ class House
 def line(number)
   case number
   when 1
-    "This is the house that Jack built.\n"
+    # "This is the house that Jack built.\n"
+    _construct_line(number)
   when 2
     "This is the malt that lay in the house that Jack built.\n"
   when 3
@@ -32,20 +33,37 @@ def line(number)
 end
 
 def recite
-  _array_for_range_of_lines.join("\n")
+  _array_of_lines.join("\n")
 end
 
 private 
 
 
-def _array_for_range_of_lines(upper_limit = 12)
+def _array_of_lines(upper_limit_of_lines = 12)
   array_of_lines = Array.new
-  (1..upper_limit).each do |line_number|
+  (1..upper_limit_of_lines).each do |line_number|
     array_of_lines << line(line_number)  
   end
   array_of_lines
 end
 
+def _line_1
+  "the house that Jack built."
+end
 
+
+
+def _array_of_segmented_line(upper_limit_line_number)
+  array_of_segment_line = Array.new
+  (1..upper_limit_line_number).each do |line_segment_num|
+    line_segment = send("_line_#{line_segment_num}") 
+    array_of_segment_line << line_segment
+  end
+  array_of_segment_line
+end
+
+def _construct_line(upper_limit_line_number)
+  "This is ".concat( ( _array_of_segmented_line(upper_limit_line_number).join(" ") ).concat("\n") )
+end
 
 end
