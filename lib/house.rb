@@ -3,7 +3,6 @@ class House
 def line(number)
   case number
   when 1
-    # "This is the house that Jack built.\n"
     _construct_line(number)
   when 2
     _construct_line(number)
