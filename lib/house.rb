@@ -2,29 +2,7 @@ class House
 
 def line(number)
   case number
-  when 1
-    _construct_line(number)
-  when 2
-    _construct_line(number)
-  when 3
-    _construct_line(number)
-  when 4
-    _construct_line(number)
-  when 5
-    _construct_line(number)
-  when 6
-    _construct_line(number)
-  when 7
-    _construct_line(number)
-  when 8
-    _construct_line(number)
-  when 9
-    _construct_line(number)
-  when 10
-    _construct_line(number)
-  when 11
-    _construct_line(number)
-  when 12
+  when 1..12
     _construct_line(number)
   else
     "ERROR: OUT OF RANGE, ONLY \'1..12\'"
