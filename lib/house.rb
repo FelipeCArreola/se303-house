@@ -31,11 +31,7 @@ class House
   end
   
   def recite
-    array_of_lines = Array.new
-    (1..12).each do |line_number|
-      array_of_lines << line(line_number)
-    end
-    array_of_lines.join("\n")
+    (1..12).collect {|line_number| line(line_number)}.join("\n")
   end
 
 end
