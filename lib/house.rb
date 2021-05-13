@@ -2,11 +2,11 @@ class House
   def line(number)
     case number
     when 1
-      "This is the house that Jack built.\n"
+      "This is #{_line_segment_1}.\n"
     when 2
-      "This is the malt that lay in the house that Jack built.\n"
+      "This is #{_line_segment_2 + " " + _line_segment_1}.\n"
     when 3
-      "This is the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{_line_segment_3+ " " + _line_segment_2 + " " + _line_segment_1}.\n"
     when 4
       "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     when 5
@@ -32,6 +32,24 @@ class House
   
   def recite
     (1..12).collect {|line_number| line(line_number)}.join("\n")
+  end
+
+  private
+
+  def _line_segment_1
+    "the house that Jack built"
+  end
+
+  def _line_segment_2
+    "the malt that lay in"
+  end
+
+  def _line_segment_3
+    "the rat that ate"
+  end
+
+  def _line_segment_4
+    "the cat that killed"
   end
 
 end
