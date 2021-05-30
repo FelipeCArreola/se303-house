@@ -6,25 +6,25 @@ class House
     when 2
       "This is #{_construct_line(2)} the house that Jack built.\n"
     when 3
-      "This is #{_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(3)} the house that Jack built.\n"
     when 4
-      "This is #{_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(4)} the house that Jack built.\n"
     when 5
-      "This is #{_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(5)} the house that Jack built.\n"
     when 6
-      "This is #{_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(6)} the house that Jack built.\n"
     when 7
-      "This is #{_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(7)} the house that Jack built.\n"
     when 8
-      "This is #{_line_segment_8+" "+_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(8)} the house that Jack built.\n"
     when 9
-      "This is #{_line_segment_9+" "+_line_segment_8+" "+_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(9)} the house that Jack built.\n"
     when 10
-      "This is #{_line_segment_10+" "+_line_segment_9+" "+_line_segment_8+" "+_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(10)} the house that Jack built.\n"
     when 11
-      "This is #{_line_segment_11+" "+_line_segment_10+" "+_line_segment_9+" "+_line_segment_8+" "+_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(11)} the house that Jack built.\n"
     when 12
-      "This is #{_line_segment_12+" "+_line_segment_11+" "+_line_segment_10+" "+_line_segment_9+" "+_line_segment_8+" "+_line_segment_7+" "+_line_segment_6+" "+_line_segment_5+" "+_line_segment_4+" "+_line_segment_3+" "+_line_segment_2} the house that Jack built.\n"
+      "This is #{_construct_line(12)} the house that Jack built.\n"
     else
       "ERROR: OUT OF RANGE, ONLY \'1..12\'"
     end
