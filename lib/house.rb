@@ -1,21 +1,22 @@
 class House
-  attr_reader :segments
+  attr_reader :segments, :strategy
 
   def initialize
-    @segments = [
-      "the horse and the hound and the horn that belonged to",
-      "the farmer sowing his corn that kept",
-      "the rooster that crowed in the morn that woke",
-      "the priest all shaven and shorn that married",
-      "the man all tattered and torn that kissed",
-      "the maiden all forlorn that milked",
-      "the cow with the crumpled horn that tossed",
-      "the dog that worried",
-      "the cat that killed",
-      "the rat that ate",
-      "the malt that lay in",
-      ""
-    ]
+    @segments = {
+      1   =>  "the horse and the hound and the horn that belonged to",
+      2   =>  "the farmer sowing his corn that kept",
+      3   =>  "the rooster that crowed in the morn that woke",
+      4   =>  "the priest all shaven and shorn that married",
+      5   =>  "the man all tattered and torn that kissed",
+      6   =>  "the maiden all forlorn that milked",
+      7   =>  "the cow with the crumpled horn that tossed",
+      8   =>  "the dog that worried",
+      9   =>  "the cat that killed",
+      10  =>  "the rat that ate",
+      11  =>  "the malt that lay in",
+      12  =>  ""
+    }
+    #@strategy = strategy
   end
 
   def line(number)
@@ -34,7 +35,7 @@ class House
   private
 
   def _construct_line(upper_limit_line_number)
-    segments.last(upper_limit_line_number).join(" ")
+    segments.values.last(upper_limit_line_number).join(" ")
   end
 
 end
