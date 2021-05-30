@@ -1,30 +1,8 @@
 class House
   def line(number)
     case number
-    when 1
-      "This is #{_construct_line(1)}the house that Jack built.\n"
-    when 2
-      "This is #{_construct_line(2)}the house that Jack built.\n"
-    when 3
-      "This is #{_construct_line(3)}the house that Jack built.\n"
-    when 4
-      "This is #{_construct_line(4)}the house that Jack built.\n"
-    when 5
-      "This is #{_construct_line(5)}the house that Jack built.\n"
-    when 6
-      "This is #{_construct_line(6)}the house that Jack built.\n"
-    when 7
-      "This is #{_construct_line(7)}the house that Jack built.\n"
-    when 8
-      "This is #{_construct_line(8)}the house that Jack built.\n"
-    when 9
-      "This is #{_construct_line(9)}the house that Jack built.\n"
-    when 10
-      "This is #{_construct_line(10)}the house that Jack built.\n"
-    when 11
-      "This is #{_construct_line(11)}the house that Jack built.\n"
-    when 12
-      "This is #{_construct_line(12)}the house that Jack built.\n"
+    when 1..12
+      "This is #{_construct_line(number)}the house that Jack built.\n"
     else
       "ERROR: OUT OF RANGE, ONLY \'1..12\'"
     end
