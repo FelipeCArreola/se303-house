@@ -1,5 +1,5 @@
 class House
-  attr_reader :segments, :strategy
+  attr_reader :segments, :prefix
 
   def initialize
     @segments = {
@@ -16,13 +16,15 @@ class House
       11  =>  "the malt that lay in",
       12  =>  ""
     }
-    #@strategy = strategy
+    @prefix = Prefix.new
   end
 
   def line(number)
     case number
     when 1..12
-      "This is #{_construct_line(number)}the house that Jack built.\n"
+      "#{prefix.this.attach(
+        "#{_construct_line(number)}the house that Jack built.\n"
+      )}" 
     else
       "ERROR: OUT OF RANGE, ONLY \'1..12\'"
     end
@@ -37,5 +39,42 @@ class House
   def _construct_line(upper_limit_line_number)
     segments.values.last(upper_limit_line_number).join(" ")
   end
+
+end
+
+module LinePrefixBehavior
+
+  def attach(string)
+    raise NoMethodError.new("#{self.class} has not implemented \'attach\' for Module: \'LinePrefixBehavior\'")
+  end
+end
+
+class ThisPrefix
+  
+  include LinePrefixBehavior
+
+  def attach(string)
+    string.prepend("This is ")
+  end
+
+end
+
+class TharPrefix
+  
+  include LinePrefixBehavior
+
+  def attach(string)
+    string.prepend("Thar be ")
+  end
+
+end
+
+class Prefix
+  attr_reader :this, :thar
+
+    def initialize
+      @this = ThisPrefix.new
+      @thar = TharPrefix.new
+    end
 
 end
