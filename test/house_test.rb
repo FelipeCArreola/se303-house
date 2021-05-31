@@ -7,73 +7,73 @@ class HouseTest < Minitest::Test
 
   def test_line_1
     expected = "This is the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(1)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(1)
   end
 
   def test_line_2
     # skip
     expected = "This is the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(2)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(2)
   end
 
   def test_line_3
     # skip
     expected = "This is the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(3)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(3)
   end
 
   def test_line_4
     # skip
     expected = "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(4)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(4)
   end
 
   def test_line_5
     # skip
     expected = "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(5)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(5)
   end
 
   def test_line_6
     # skip
     expected = "This is the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(6)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(6)
   end
 
   def test_line_7
     # skip
     expected = "This is the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(7)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(7)
   end
 
   def test_line_8
     # skip
     expected = "This is the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(8)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(8)
   end
 
   def test_line_9
     # skip
     expected = "This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(9)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(9)
   end
 
   def test_line_10
     # skip
     expected = "This is the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(10)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(10)
   end
 
   def test_line_11
     # skip
     expected = "This is the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(11)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(11)
   end
 
   def test_line_12
     # skip
     expected = "This is the horse and the hound and the horn that belonged to the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "This").line(12)
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).line(12)
   end
 
   def test_all_the_lines
@@ -103,78 +103,78 @@ This is the farmer sowing his corn that kept the rooster that crowed in the morn
 
 This is the horse and the hound and the horn that belonged to the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.
     TEXT
-    assert_equal expected, House.new(prefix: "This").recite
+    assert_equal expected, House.new(prefix: "This", setup: "Sort", data: House.segments).recite
   end
   
   def thar_test_line_1
     expected = "Thar be the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(1)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(1)
   end
 
   def thar_test_line_2
     # skip
     expected = "Thar be the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(2)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(2)
   end
 
   def thar_test_line_3
     # skip
     expected = "Thar be the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(3)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(3)
   end
 
   def thar_test_line_4
     # skip
     expected = "Thar be the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(4)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(4)
   end
 
   def thar_test_line_5
     # skip
     expected = "Thar be the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(5)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(5)
   end
 
   def thar_test_line_6
     # skip
     expected = "Thar be the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(6)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(6)
   end
 
   def thar_test_line_7
     # skip
     expected = "Thar be the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(7)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(7)
   end
 
   def thar_test_line_8
     # skip
     expected = "Thar be the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(8)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(8)
   end
 
   def thar_test_line_9
     # skip
     expected = "Thar be the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(9)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(9)
   end
 
   def thar_test_line_10
     # skip
     expected = "Thar be the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(10)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(10)
   end
 
   def thar_test_line_11
     # skip
     expected = "Thar be the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(11)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(11)
   end
 
   def thar_test_line_12
     # skip
     expected = "Thar be the horse and the hound and the horn that belonged to the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    assert_equal expected, House.new(prefix: "Thar").line(12)
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).line(12)
   end
 
   def thar_test_all_the_lines
@@ -204,7 +204,7 @@ Thar be the farmer sowing his corn that kept the rooster that crowed in the morn
 
 Thar be the horse and the hound and the horn that belonged to the farmer sowing his corn that kept the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.
     TEXT
-    assert_equal expected, House.new(prefix: "Thar").recite
+    assert_equal expected, House.new(prefix: "Thar", setup: "Sort", data: House.segments).recite
   end
 
 end

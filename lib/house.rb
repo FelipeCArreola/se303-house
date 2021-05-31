@@ -42,7 +42,7 @@ class House
   private
 
   def _construct_line(upper_limit_line_number)
-    segments.values.last(upper_limit_line_number).join(" ")
+    ordered_data.values.last(upper_limit_line_number).join(" ")
   end
 
 end
