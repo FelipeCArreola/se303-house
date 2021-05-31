@@ -71,15 +71,15 @@ end
 
 class Prefix
 
-    def self.factory(px)
-      case px
-      when "This"
-        ThisPrefix
-      when "Thar"
-        TharPrefix
-      else
-        raise Exception.new("No prefix found for selection: #{px}.\n")
-      end.new
-    end
+  def self.factory(px)
+    case px
+    when "This"
+      ThisPrefix
+    when "Thar"
+      TharPrefix
+    else
+      raise Exception.new("No prefix found for selection: #{px}.\n")
+    end.new
+  end
 
 end
