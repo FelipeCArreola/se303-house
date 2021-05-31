@@ -1,7 +1,7 @@
 class House
   attr_reader :segments, :prefix
 
-  def initialize
+  def initialize(args)
     @segments = {
       1   =>  "the horse and the hound and the horn that belonged to",
       2   =>  "the farmer sowing his corn that kept",
@@ -15,14 +15,14 @@ class House
       10  =>  "the rat that ate",
       11  =>  "the malt that lay in",
       12  =>  ""
-    }
-    @prefix = Prefix.new
+    } 
+    @prefix = Prefix.factory(args[:prefix])
   end
 
   def line(number)
     case number
     when 1..12
-      "#{prefix.this.attach(
+      "#{prefix.attach(
         "#{_construct_line(number)}the house that Jack built.\n"
       )}" 
     else
@@ -45,7 +45,7 @@ end
 module LinePrefixBehavior
 
   def attach(string)
-    raise NoMethodError.new("#{self.class} has not implemented \'attach\' for Module: \'LinePrefixBehavior\'")
+    raise NoMethodError.new("#{self.class} has not implemented \'attach\' for Module: \'LinePrefixBehavior\'.\n")
   end
 end
 
@@ -70,11 +70,16 @@ class TharPrefix
 end
 
 class Prefix
-  attr_reader :this, :thar
 
-    def initialize
-      @this = ThisPrefix.new
-      @thar = TharPrefix.new
+    def self.factory(px)
+      case px
+      when "This"
+        ThisPrefix
+      when "Thar"
+        TharPrefix
+      else
+        raise Exception.new("No prefix found for selection: #{px}.\n")
+      end.new
     end
 
 end
